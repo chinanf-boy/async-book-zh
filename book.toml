@@ -1,15 +1,45 @@
 [book]
 title = "Asynchronous Programming in Rust"
-authors = ["Taylor Cramer"]
+authors = ["Taylor Cramer", "译文：Yobrave"]
+description = "Rust 异步编程非官方中文."
+language = "zh-CN"
 
 [build]
+build-dir = "docs"
 create-missing = false
+use-default-preprocessors = false
 
-[preprocess.links]
+[preprocessor.links]
+# renderers = ["html"]
 
 [output.html]
-git-repository-url = "https://github.com/rust-lang/async-book"
+mathjax-support = false
+theme = "theme"
+curly-quotes = true
+google-analytics = "UA-128555056-1"
+# additional-css = ["theme/custom.css"]
+git_repository_url = "https://github.com/chinanf-boy/async-book-zh"
+git_repository_icon = "fa-github"
+# additional-js = ["theme/custom.js"]
 
-[output.linkcheck]
-follow-web-links = true
-traverse-parent-directories = false
+# [output.linkcheck]
+# follow-web-links = true
+# traverse-parent-directories = false
+# exclude = [ "google\\.com" ]
+
+[output.html.playpen]
+# editor = "./path/to/editor"
+editable = false
+
+[output.html.search]
+enable = true
+# searcher = "./path/to/searcher"
+limit-results = 30
+teaser-word-count = 30
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 1
+boost-paragraph = 1
+expand = true
+heading-split-level = 3
+# copy-js = true
